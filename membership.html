@@ -26,7 +26,7 @@
       <li><a href="events.html">Events</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="membership.html" aria-current="page">Membership</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="shop.html">Merch</a></li><li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -35,7 +35,8 @@
   <div class="hero-inner" style="padding-bottom: 60px;">
     <div class="eyebrow">Join up</div>
     <h1 style="max-width: 14ch;">Fish with the club this season.</h1>
-    <p class="lede">[Placeholder copy] Membership gets you into every club comp, the clubhouse, and the Cape Hawke Classic. Pick the option that fits.</p>
+    <p class="lede">Membership brings you into the club community, with access to club competitions, tournaments and events. Fees below apply for 1 July 2026 to 30 June 2027.</p>
+    <div class="hero-actions"><a class="btn btn-gold" href="#apply">Apply online</a></div>
   </div>
   <svg class="tideline" viewBox="0 0 1440 64" preserveAspectRatio="none" style="position:absolute; bottom:0; left:0;">
     <path data-base="M0,32 C 300,32 900,32 1440,32 L1440,64 L0,64 Z" fill="rgba(255,255,255,0.05)"></path>
@@ -44,21 +45,26 @@
 
 <section class="section-sand">
   <div class="container">
-    <div class="grid-3">
-      <div class="card">
-        <span class="tag">Individual</span>
-        <h3>[$00 / year]</h3>
-        <p>[Placeholder] Full voting membership, comp entry, clubhouse access.</p>
-      </div>
+    <div class="grid-4">
       <div class="card" style="border-color: var(--gold); border-width: 2px;">
-        <span class="tag">Family</span>
-        <h3>[$00 / year]</h3>
-        <p>[Placeholder] Covers partner + juniors under [age] — most popular option.</p>
+        <span class="tag">Senior</span>
+        <h3>$150 / year</h3>
+        <p>Full fishing membership for anglers 16 and over.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Non-fishing</span>
+        <h3>$50 / year</h3>
+        <p>Membership for those who don't fish in club competitions.</p>
       </div>
       <div class="card">
         <span class="tag">Junior</span>
-        <h3>[$00 / year]</h3>
-        <p>[Placeholder] For anglers under [age], includes mentoring program access.</p>
+        <h3>$0 / 2026-27</h3>
+        <p>Free this season for anglers 15 years and under.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Small Fry</span>
+        <h3>$0 / 2026-27</h3>
+        <p>Free this season for anglers 10 years and under.</p>
       </div>
     </div>
   </div>
@@ -74,23 +80,55 @@
     </div>
     <div class="card" style="padding: 0;">
       <div style="padding: 8px 28px;">
-        <div class="info-row"><span class="when">Comps</span><div class="what"><p>[Placeholder] Entry into all monthly point-score comps and the annual classic.</p></div></div>
-        <div class="info-row"><span class="when">Clubhouse</span><div class="what"><p>[Placeholder] Access to the clubhouse, boat ramp arrangements, and gear storage [if applicable].</p></div></div>
-        <div class="info-row"><span class="when">Mentoring</span><div class="what"><p>[Placeholder] Pairing with experienced anglers for grounds, technique and safety.</p></div></div>
-        <div class="info-row"><span class="when">Newsletter</span><div class="what"><p>[Placeholder] Monthly catch reports, tide notes and upcoming events.</p></div></div>
+        <div class="info-row"><span class="when">Comps</span><div class="what"><p>Eligibility to score points in club competitions and tournaments on a CHGFC registered boat or team.</p></div></div>
+        <div class="info-row"><span class="when">Learning</span><div class="what"><p>Club demonstration nights, such as the tackle rigging night, with another planned for November.</p></div></div>
+        <div class="info-row"><span class="when">Community</span><div class="what"><p>A welcoming club for members of all ages and experience levels.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-navy">
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
-    <div>
-      <div class="eyebrow">Ready to join?</div>
-      <h2 style="color:var(--white); margin-bottom:4px;">Sign up for [Year] season</h2>
-      <p>[Placeholder] Applications reviewed at the next committee meeting — new members welcome year-round.</p>
+<section class="section-sand" id="apply">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Join the club</div>
+        <h2>Membership application</h2>
+      </div>
+      <p>Complete the form and the club secretary will be in touch about your application. Fees apply for 1 July 2026 to 30 June 2027.</p>
     </div>
-    <a class="btn btn-gold" href="contact.html">Enquire about joining</a>
+    <div class="card">
+      <!-- TODO: proposer/seconder are optional for now (the form asks for members of 1+ year's standing); confirm with the secretary -->
+      <form id="join-form">
+        <input type="hidden" name="access_key" value="df0476c0-bca7-45e7-892a-080580cc840f">
+        <input type="hidden" name="subject" value="New membership application (website)">
+        <input type="hidden" name="from_name" value="CHGFC website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <div class="field full" role="radiogroup" aria-labelledby="j-type-l"><span class="legend" id="j-type-l">I am applying as *</span><div class="choices"><label class="choice"><input type="radio" name="application_type" value="New member" required> New member</label><label class="choice"><input type="radio" name="application_type" value="Renewal"> Renewal</label></div></div>
+          <div class="field full" role="radiogroup" aria-labelledby="j-fee-l"><span class="legend" id="j-fee-l">Membership type *</span><div class="choices"><label class="choice"><input type="radio" name="membership_type" value="Senior – $150" required> Senior – $150</label><label class="choice"><input type="radio" name="membership_type" value="Non-fishing member – $50"> Non-fishing member – $50</label><label class="choice"><input type="radio" name="membership_type" value="Junior (15 and under) – $0 for 2026/27"> Junior (15 and under) – $0 for 2026/27</label><label class="choice"><input type="radio" name="membership_type" value="Small Fry (10 and under) – $0 for 2026/27"> Small Fry (10 and under) – $0 for 2026/27</label></div></div>
+          <div class="field full"><label for="j-name">Full name *</label><input type="text" id="j-name" name="name" required autocomplete="name"></div>
+          <div class="field full"><label for="j-address">Street address *</label><input type="text" id="j-address" name="address" required autocomplete="street-address"></div>
+          <div class="field"><label for="j-suburb">Suburb *</label><input type="text" id="j-suburb" name="suburb" required autocomplete="address-level2"></div>
+          <div class="field"><label for="j-state">State *</label><input type="text" id="j-state" name="state" required autocomplete="address-level1"></div>
+          <div class="field"><label for="j-postcode">Postcode *</label><input type="text" id="j-postcode" name="postcode" required autocomplete="postal-code"></div>
+          <div class="field"><label for="j-dob">Date of birth *</label><input type="date" id="j-dob" name="date_of_birth" required autocomplete="bday"></div>
+          <div class="field"><label for="j-mobile">Mobile *</label><input type="tel" id="j-mobile" name="mobile" required autocomplete="tel"></div>
+          <div class="field"><label for="j-phone">Other phone</label><input type="tel" id="j-phone" name="phone"></div>
+          <div class="field full"><label for="j-email">Email *</label><input type="email" id="j-email" name="email" required autocomplete="email"></div>
+          <div class="field"><label for="j-em-name">Emergency contact name *</label><input type="text" id="j-em-name" name="emergency_contact_name" required></div>
+          <div class="field"><label for="j-em-num">Emergency contact number *</label><input type="tel" id="j-em-num" name="emergency_contact_number" required></div>
+          <div class="field full" role="radiogroup" aria-labelledby="j-susp-l"><span class="legend" id="j-susp-l">Have you ever been suspended from another club? (new members)</span><div class="choices"><label class="choice"><input type="radio" name="suspended_from_another_club" value="No"> No</label><label class="choice"><input type="radio" name="suspended_from_another_club" value="Yes"> Yes</label></div></div>
+          <div class="field full"><label for="j-susp-reason">If yes, please state the reason</label><textarea id="j-susp-reason" name="suspension_reason" rows="3"></textarea></div>
+          <div class="field"><label for="j-prop">Proposed by (new members)</label><input type="text" id="j-prop" name="proposed_by"></div>
+          <div class="field"><label for="j-sec">Seconded by (new members)</label><input type="text" id="j-sec" name="seconded_by"></div>
+          <div class="field full"><label class="choice" for="j-agree"><input type="checkbox" id="j-agree" name="agreed_to_rules" value="Yes" required> I agree to be bound by the Rules and By-Laws of the Association currently in force. *</label></div>
+        </div>
+        <p class="form-note">Your details are emailed to the club secretary to assess your application.</p>
+        <button type="submit" class="btn btn-gold">Submit application</button>
+        <div class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -102,7 +140,7 @@
           <img src="assets/logo.jpg" alt="Cape Hawke Game Fishing Club logo">
           <span style="color:var(--white); font-family:var(--font-display); text-transform:uppercase;">Cape Hawke GFC</span>
         </div>
-        <p style="max-width:32ch; font-size:0.85rem;">[Placeholder] Fishing the grounds off Cape Hawke, Forster–Tuncurry, NSW.</p>
+        <p style="max-width:32ch; font-size:0.85rem;">Fishing the grounds off Cape Hawke, Forster–Tuncurry, NSW.</p>
       </div>
       <div>
         <h4>Club</h4>
@@ -117,26 +155,18 @@
         <ul>
           <li><a href="sponsors.html">Sponsors</a></li>
           <li><a href="contact.html">Contact us</a></li>
-          <li><a href="#">Newsletter [placeholder]</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
-        <ul>
-          <li>[Clubhouse address placeholder]</li>
-          <li>[email@placeholder.com]</li>
-          <li>[+61 0 0000 0000]</li>
-        </ul>
+        <h4>Find us</h4><ul><li>PO Box 277, Tuncurry NSW 2428</li><li><a href="mailto:secretary@capehawkegfc.com.au">secretary@capehawkegfc.com.au</a></li><li><a href="https://www.facebook.com/profile.php?id=61580954534318" target="_blank" rel="noopener">Facebook</a></li></ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© [Year] Cape Hawke Game Fishing Club</span>
-      <span>Site content is placeholder — pending club sign-off</span>
+      <span>© <span data-current-year></span> Cape Hawke Game Fishing Club</span>
+      <span>Cape Hawke Game Fishing Club Inc. · ABN 80 985 447 303</span><span>Built and maintained by <a href="https://midcoastweb.com.au" target="_blank" rel="noopener">MidCoast Web Co</a></span>
     </div>
   </div>
 </footer>
-
-<div class="placeholder-flag">Placeholder content — for review</div>
 <script src="js/main.js"></script>
 </body>
 </html>

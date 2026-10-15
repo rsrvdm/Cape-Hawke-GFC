@@ -16,12 +16,9 @@ assets/logo.jpg      Club logo
 ```
 
 ## Before going live
-- [ ] Replace all `[bracketed placeholder]` text with real club content
-- [ ] Add real sponsor names/logos on sponsors.html and index.html
-- [ ] Wire up the contact form (js/main.js currently just shows a placeholder message
-      on submit — point the `<form>` at a service like Formspree or Web3Forms,
-      or your own backend)
-- [ ] Update footer contact details (address, email, phone, socials) across all pages
+- [x] Real club details added (about, committee, membership fees, sponsorship tiers, contact)
+- [ ] Add the leaderboard once results exist, and sponsor names/logos when confirmed
+- [ ] Contact form opens the visitor's email app (mailto:); swap for Formspree/Web3Forms later if wanted
 
 ## Deploy (static hosting — Netlify, Vercel, or Cloudflare Pages)
 1. Push this folder to a GitHub repo
@@ -44,3 +41,7 @@ PowerShell static server instead:
 powershell -ExecutionPolicy Bypass -File ../.claude/serve.ps1
 ```
 then visit http://localhost:8123
+
+
+## Merch shop
+See `SHOP-SETUP.md`. Checkout stays off while `shop/products.json` has `"mode": "sample"`. Never commit `shop/config.php`.

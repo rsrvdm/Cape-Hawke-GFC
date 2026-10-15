@@ -1,3 +1,7 @@
 .DS_Store
 *.log
 node_modules/
+
+shop/config.php
+shop/orders/*.json
+shop/orders/*.log

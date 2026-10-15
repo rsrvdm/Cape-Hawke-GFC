@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merch — Cape Hawke Game Fishing Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.jpg" alt="Cape Hawke Game Fishing Club logo">
+      <span class="brand-text">
+        <span class="name">Cape Hawke</span>
+        <span class="sub">Game Fishing Club</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="shop.html" aria-current="page">Merch</a></li><li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section class="hero" style="padding-bottom: 0;">
+  <div class="hero-inner" style="padding-bottom: 60px;">
+    <div class="eyebrow">Club merch</div>
+    <h1 style="max-width: 14ch;">Wear the club.</h1>
+    <p class="lede">Gear with the club logo is on its way.</p>
+  </div>
+  <svg class="tideline" viewBox="0 0 1440 64" preserveAspectRatio="none" style="position:absolute; bottom:0; left:0;">
+    <path data-base="M0,32 C 300,32 900,32 1440,32 L1440,64 L0,64 Z" fill="rgba(255,255,255,0.05)"></path>
+  </svg>
+</section>
+
+<section class="section-sand" id="shop-soon">
+  <div class="container">
+    <div class="card" style="max-width:640px; margin:0 auto; text-align:center; padding:48px 28px;">
+      <span class="tag">Coming soon</span>
+      <h2>The club shop is under construction</h2>
+      <p>Shirts, caps and more with the club logo are on the way. Keep an eye on this page and on our Facebook page for the launch.</p>
+      <p><a class="btn btn-gold" href="https://www.facebook.com/profile.php?id=61580954534318" target="_blank" rel="noopener">Follow us on Facebook</a></p>
+    </div>
+  </div>
+</section>
+
+<div id="shop-app" hidden>
+<section class="section-sand">
+  <div class="container">
+    <div id="shop-banner" class="form-status show err" role="status" hidden></div>
+    <div id="paid-msg" class="form-status show ok" role="status" hidden>Thank you! Your payment went through and your order has been sent to the club. Your receipt is on its way by email.</div>
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">The shop</div>
+        <h2>Merch</h2>
+      </div>
+      <p>Choose your items and sizes, add them to your basket, then pay once at checkout.</p>
+    </div>
+    <div id="products" class="grid-3"></div>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+    <div id="cart" class="card"></div>
+  </div>
+</section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.jpg" alt="Cape Hawke Game Fishing Club logo">
+          <span style="color:var(--white); font-family:var(--font-display); text-transform:uppercase;">Cape Hawke GFC</span>
+        </div>
+        <p style="max-width:32ch; font-size:0.85rem;">Fishing the grounds off Cape Hawke, Forster–Tuncurry, NSW.</p>
+      </div>
+      <div>
+        <h4>Club</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get involved</h4>
+        <ul>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4><ul><li>PO Box 277, Tuncurry NSW 2428</li><li><a href="mailto:secretary@capehawkegfc.com.au">secretary@capehawkegfc.com.au</a></li><li><a href="https://www.facebook.com/profile.php?id=61580954534318" target="_blank" rel="noopener">Facebook</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> Cape Hawke Game Fishing Club</span>
+      <span>Cape Hawke Game Fishing Club Inc. · ABN 80 985 447 303</span><span>Built and maintained by <a href="https://midcoastweb.com.au" target="_blank" rel="noopener">MidCoast Web Co</a></span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

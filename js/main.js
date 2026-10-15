@@ -1,6 +1,9 @@
 // Cape Hawke GFC — shared behaviour
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-current-year]').forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
   // Mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
@@ -29,17 +32,59 @@ document.addEventListener('DOMContentLoaded', () => {
     animate();
   });
 
-  // Contact form: placeholder submit handler (no backend wired up yet)
+  // Membership application: sent to the club secretary through Web3Forms
+  const join = document.querySelector('#join-form');
+  if (join) {
+    join.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = join.querySelector('.form-status');
+      const btn = join.querySelector('button[type="submit"]');
+      const show = (msg, ok) => {
+        status.textContent = msg;
+        status.classList.add('show');
+        status.classList.toggle('ok', ok);
+        status.classList.toggle('err', !ok);
+      };
+      const data = Object.fromEntries(new FormData(join));
+      if (!data.access_key || data.access_key === 'YOUR_ACCESS_KEY_HERE') {
+        show('This form is not connected yet, so no application was sent.', false);
+        return;
+      }
+      data.application_date = new Date().toLocaleDateString('en-AU');
+      btn.disabled = true;
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const json = await res.json();
+        if (!json.success) throw new Error(json.message || 'failed');
+        show('Thanks! Your application has been sent to the club secretary.', true);
+        join.reset();
+      } catch (err) {
+        show('Sorry, something went wrong. Please email your details to secretary@capehawkegfc.com.au.', false);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  }
+
+  // Contact form: opens the visitor's email app addressed to the club secretary
   const form = document.querySelector('#contact-form');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      const v = (id) => (form.querySelector('#' + id) || {}).value || '';
+      const subject = 'Website enquiry: ' + v('reason');
+      const body = v('message') + '\n\nFrom: ' + v('name') + '\nEmail: ' + v('email');
+      window.location.href = 'mailto:secretary@capehawkegfc.com.au?subject=' +
+        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       const status = form.querySelector('.form-status');
       if (status) {
-        status.textContent = 'This form is a placeholder — connect it to your email or a form service (e.g. Formspree) to go live.';
+        status.textContent = 'Your email app should open with your message ready to send.';
         status.classList.add('show', 'ok');
       }
-      form.reset();
     });
   }
 });

@@ -26,7 +26,7 @@
       <li><a href="events.html" aria-current="page">Events</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="membership.html">Membership</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="shop.html">Merch</a></li><li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -35,7 +35,7 @@
   <div class="hero-inner" style="padding-bottom: 60px;">
     <div class="eyebrow">Calendar</div>
     <h1 style="max-width: 14ch;">Comps, socials &amp; club nights.</h1>
-    <p class="lede">[Placeholder copy] Everything on the club calendar — monthly point-score comps, the annual classic, and general meetings.</p>
+    <p class="lede">The club year: eight club competitions and four tournaments, plus demonstration nights and monthly committee meetings.</p>
   </div>
   <svg class="tideline" viewBox="0 0 1440 64" preserveAspectRatio="none" style="position:absolute; bottom:0; left:0;">
     <path data-base="M0,32 C 300,32 900,32 1440,32 L1440,64 L0,64 Z" fill="rgba(255,255,255,0.05)"></path>
@@ -46,33 +46,33 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Upcoming</div>
-        <h2>Next up</h2>
+        <div class="eyebrow">July 2026 to June 2027</div>
+        <h2>Season calendar</h2>
       </div>
+      <p>Dates are subject to change, so check with the club.</p>
     </div>
-    <div class="card" style="padding: 0;">
-      <div style="padding: 28px;">
-        <div class="info-row">
-          <span class="when">[Date placeholder]</span>
-          <div class="what">
-            <h4>[Event Name — e.g. Monthly Point-Score Comp]</h4>
-            <p>[Placeholder] Weigh-in from [time] at the clubhouse. Open to financial members. [Location placeholder].</p>
-          </div>
-        </div>
-        <div class="info-row">
-          <span class="when">[Date placeholder]</span>
-          <div class="what">
-            <h4>[Event Name — e.g. General Meeting]</h4>
-            <p>[Placeholder] Monthly club meeting — reports, upcoming comps, guest speaker [name placeholder].</p>
-          </div>
-        </div>
-        <div class="info-row">
-          <span class="when">[Date placeholder]</span>
-          <div class="what">
-            <h4>[Event Name — e.g. Cape Hawke Classic]</h4>
-            <p>[Placeholder] The club's flagship annual tournament. Entries open [date], presentation dinner to follow.</p>
-          </div>
-        </div>
+    <div id="calendar">
+      <div id="cal-filters" class="cal-filters" role="group" aria-label="Event types"></div>
+      <button type="button" id="cal-past" class="cal-chip cal-past">Show past events</button>
+      <div id="cal-list"></div>
+      <noscript><p>The calendar needs JavaScript. Contact the secretary for the season dates.</p></noscript>
+    </div>
+    <div class="card" style="margin-top:32px;">
+      <div class="info-row">
+        <span class="when">Comps</span>
+        <div class="what"><h4>8 club competitions a year</h4><p>Point-score competitions for CHGFC registered boats and teams.</p></div>
+      </div>
+      <div class="info-row">
+        <span class="when">Tournaments</span>
+        <div class="what"><h4>4 tournaments a year</h4><p>Including one tournament aimed at becoming a NSW GFA sanctioned major event.</p></div>
+      </div>
+      <div class="info-row">
+        <span class="when">November</span>
+        <div class="what"><h4>Tackle rigging demonstration night</h4><p>Another demonstration night is planned. Date to be confirmed.</p></div>
+      </div>
+      <div class="info-row">
+        <span class="when">Monthly</span>
+        <div class="what"><h4>Committee meeting</h4><p>Membership applications are reviewed at the monthly committee meeting.</p></div>
       </div>
     </div>
   </div>
@@ -86,15 +86,10 @@
         <h2>Point-score leaderboard</h2>
       </div>
     </div>
-    <div class="catch-board">
-      <div class="catch-row head">
-        <span>Rank</span><span>Angler</span><span>Species</span><span>Weight</span>
-      </div>
-      <div class="catch-row"><span class="rank">01</span><span class="angler">[Angler Name]</span><span class="species">[Species]</span><span class="weight">[00.0kg]</span></div>
-      <div class="catch-row"><span class="rank">02</span><span class="angler">[Angler Name]</span><span class="species">[Species]</span><span class="weight">[00.0kg]</span></div>
-      <div class="catch-row"><span class="rank">03</span><span class="angler">[Angler Name]</span><span class="species">[Species]</span><span class="weight">[00.0kg]</span></div>
-      <div class="catch-row"><span class="rank">04</span><span class="angler">[Angler Name]</span><span class="species">[Species]</span><span class="weight">[00.0kg]</span></div>
-      <div class="catch-row"><span class="rank">05</span><span class="angler">[Angler Name]</span><span class="species">[Species]</span><span class="weight">[00.0kg]</span></div>
+    <div class="card" style="background:rgba(255,255,255,0.04); border-color:var(--line-on-dark);">
+      <span class="tag">Coming soon</span>
+      <h3 style="color:var(--white);">Results published after each comp</h3>
+      <p>The point-score leaderboard will appear here once the first competition results are in.</p>
     </div>
   </div>
 </section>
@@ -110,18 +105,62 @@
     <div class="grid-3">
       <div class="card">
         <span class="tag">Eligible species</span>
-        <h3>[Placeholder list]</h3>
-        <p>[Marlin, tuna, mahi mahi, etc — swap for the club's real species list and any size/tag rules.]</p>
+        <h3>NSW GFA recognised species</h3>
+        <p>Eligible species follow the NSW GFA and GFAA Journal rules.</p>
       </div>
       <div class="card">
         <span class="tag">Scoring</span>
-        <h3>[Points system placeholder]</h3>
-        <p>[Placeholder] Describe how points or weight determine the leaderboard, and any tag-and-release bonus scoring.</p>
+        <h3>Points per the GFAA Journal</h3>
+        <p>Captures and tag-and-release fish are recorded and scored in line with the GFAA Journal rules and the club's points schedule.</p>
       </div>
       <div class="card">
         <span class="tag">Weigh-in</span>
-        <h3>[Time / place placeholder]</h3>
-        <p>[Placeholder] Where and when anglers need to weigh in, and who to contact on the day.</p>
+        <h3>End of each fishing day</h3>
+        <p>For competitions and tournaments, weigh-in is at the end of each day's fishing. For minor points scores, arrange weigh-in with the Weighmaster.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Club competitions</span>
+        <h3>Registered boats &amp; teams</h3>
+        <p>Points are awarded to CHGFC registered boats and teams. Members of other NSW GFA affiliated clubs may take part, but no points are awarded unless they are CHGFC members.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Tournaments</span>
+        <h3>Prizes for visiting anglers</h3>
+        <p>The same rule applies. Members of other NSW GFA affiliated clubs fishing on a CHGFC registered vessel or team (land based) may compete for prizes.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Nominations</span>
+        <h3>Skippers nominate crews</h3>
+        <p>Boat skippers and land-based team captains email the competition nomination form to <a href="mailto:secretary@capehawkegfc.com.au">the secretary</a> by the Tuesday before the competition weekend.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sand">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Fish handling</div>
+        <h2>Tagging, weighing &amp; points</h2>
+      </div>
+      <p>Results are recorded the same way for every member, in line with GFAA, NSW GFA and NSW DPIRD Fisheries requirements.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag">Tag &amp; release</span>
+        <h3>Tag, tackle check, record</h3>
+        <p>Members hand the completed tag to a club Tag &amp; Release / Points Scoring member, who inspects the tackle, records the points and forwards the tag to NSW GFA or NSW DPIRD Fisheries.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Capture weighing</span>
+        <h3>Weighmaster checks &amp; weighs</h3>
+        <p>The Weighmaster inspects the tackle from the double to the hooks or lure, weighs compliant fish and records the result and points.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Fair results</span>
+        <h3>No one marks their own catch</h3>
+        <p>Club officials never assess their own tags or captures. Another authorised official does it, and unresolved results stay pending.</p>
       </div>
     </div>
   </div>
@@ -135,7 +174,7 @@
           <img src="assets/logo.jpg" alt="Cape Hawke Game Fishing Club logo">
           <span style="color:var(--white); font-family:var(--font-display); text-transform:uppercase;">Cape Hawke GFC</span>
         </div>
-        <p style="max-width:32ch; font-size:0.85rem;">[Placeholder] Fishing the grounds off Cape Hawke, Forster–Tuncurry, NSW.</p>
+        <p style="max-width:32ch; font-size:0.85rem;">Fishing the grounds off Cape Hawke, Forster–Tuncurry, NSW.</p>
       </div>
       <div>
         <h4>Club</h4>
@@ -150,26 +189,19 @@
         <ul>
           <li><a href="sponsors.html">Sponsors</a></li>
           <li><a href="contact.html">Contact us</a></li>
-          <li><a href="#">Newsletter [placeholder]</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
-        <ul>
-          <li>[Clubhouse address placeholder]</li>
-          <li>[email@placeholder.com]</li>
-          <li>[+61 0 0000 0000]</li>
-        </ul>
+        <h4>Find us</h4><ul><li>PO Box 277, Tuncurry NSW 2428</li><li><a href="mailto:secretary@capehawkegfc.com.au">secretary@capehawkegfc.com.au</a></li><li><a href="https://www.facebook.com/profile.php?id=61580954534318" target="_blank" rel="noopener">Facebook</a></li></ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© [Year] Cape Hawke Game Fishing Club</span>
-      <span>Site content is placeholder — pending club sign-off</span>
+      <span>© <span data-current-year></span> Cape Hawke Game Fishing Club</span>
+      <span>Cape Hawke Game Fishing Club Inc. · ABN 80 985 447 303</span><span>Built and maintained by <a href="https://midcoastweb.com.au" target="_blank" rel="noopener">MidCoast Web Co</a></span>
     </div>
   </div>
 </footer>
-
-<div class="placeholder-flag">Placeholder content — for review</div>
 <script src="js/main.js"></script>
+<script src="js/events.js"></script>
 </body>
 </html>

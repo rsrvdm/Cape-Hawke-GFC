@@ -1,0 +1,15 @@
+{
+  "mode": "sample",
+  "currency": "aud",
+  "delivery": {
+    "post":   { "label": "Post to my address", "fee": 1000 },
+    "pickup": { "label": "Pick up at a club event", "fee": 0 }
+  },
+  "gst_note": "Prices include GST where applicable.",
+  "products": [
+    { "id": "shirt",  "name": "Club fishing shirt", "description": "Sample item: long-sleeve UV fishing shirt with the club logo.", "price": 4500, "sizes": ["S", "M", "L", "XL", "2XL", "3XL"], "image": "", "active": true },
+    { "id": "cap",    "name": "Club cap",           "description": "Sample item: embroidered cap with the club logo.",             "price": 3000, "sizes": [], "image": "", "active": true },
+    { "id": "stubby", "name": "Stubby holder",      "description": "Sample item: neoprene stubby holder.",                          "price": 1000, "sizes": [], "image": "", "active": true },
+    { "id": "stickers","name": "Sticker pack",      "description": "Sample item: weatherproof club stickers.",                      "price": 800,  "sizes": [], "image": "", "active": true }
+  ]
+}
