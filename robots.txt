@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /shop/
+
+Sitemap: https://capehawkegfc.com.au/sitemap.xml

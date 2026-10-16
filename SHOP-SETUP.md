@@ -21,3 +21,5 @@ The shop takes payment first. An order email only reaches the club after Stripe 
 - Is the club registered for GST?
 - Postage fee, or pick-up only?
 - Who packs and posts orders?
+
+> **Going live note:** `shop.html` has `<meta name="robots" content="noindex">` while the shop is "Coming soon". When the shop goes live, remove that line and add `shop.html` to `sitemap.xml`.
