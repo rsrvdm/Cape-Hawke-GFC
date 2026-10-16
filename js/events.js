@@ -20,14 +20,14 @@
     '2026-12-03|1730|meeting|General Meeting', '2026-12-05|1200|social|Christmas Party', '2026-12-05|0700 - 1700|nz|Northern Zone (NS)', '2026-12-06|0700 - 1700|nz|Northern Zone (NS)',
     '2026-12-11|1800|tournament|Brief', '2026-12-12|0700 - 1700|tournament|Major Points', '2026-12-13|0700 - 1700|tournament|Major Points, BBQ & Presentation',
     '2027-01-02|0700 - 1700|nz|Northern Zone (NS)', '2027-01-03|0700 - 1700|nz|Northern Zone (NS)', '2027-01-07||other|Port Macquarie Golden Lure Tournament|2027-01-16',
-    '2027-01-21|1730|meeting|Committee Meeting', '2027-01-29|1800|points|Brief', '2027-01-30|0700 - 1700|points|Major Points', '2027-01-31|0700 - 1700|points|Major Points & BBQ',
-    '2027-02-06|0700 - 1700|nz|Northern Zone (NS)', '2027-02-07|0700 - 1700|nz|Northern Zone (NS)', '2027-02-13|0700 - 1700|other|Major Points (NS) · Club Fishing Billfish Shoot Out', '2027-02-14|0700 - 1700|other|Major Points (NS) · Club Fishing Billfish Shoot Out', '2027-02-18|1730|meeting|Committee Meeting',
+    '2027-01-21|1730|meeting|Committee Meeting', '2027-01-28||other|Coffs Harbour Hot Current Tournament|2027-01-31', '2027-01-29|1800|points|Brief', '2027-01-30|0700 - 1700|points|Major Points', '2027-01-31|0700 - 1700|points|Major Points & BBQ',
+    '2027-02-06|0700 - 1700|nz|Northern Zone (NS)', '2027-02-07|0700 - 1700|nz|Northern Zone (NS)', '2027-02-18|1730|meeting|Committee Meeting', '2027-02-18||other|Club Fishing Billfish Shoot Out|2027-02-21', '2027-02-19|0700 - 1700|pointsnz|Major Points (NS)', '2027-02-20|0700 - 1700|pointsnz|Major Points (NS)',
     '2027-03-06|0700 - 1700|nz|Northern Zone (NS)', '2027-03-07|0700 - 1700|nz|Northern Zone (NS)', '2027-03-12|1800|tournament|Brief', '2027-03-13|0700 - 1700|tournament|Major Points', '2027-03-14|0700 - 1700|tournament|Major Points, BBQ & Presentation', '2027-03-18|1730|meeting|General Meeting',
     '2027-04-03|0700 - 1700|nz|Northern Zone (NS)', '2027-04-04|0700 - 1700|nz|Northern Zone (NS)', '2027-04-09|1800|tournament|Brief', '2027-04-10|0700 - 1700|tournament|Major Points', '2027-04-11|0700 - 1700|tournament|Major Points, BBQ & Presentation', '2027-04-15|1730|meeting|Committee Meeting',
     '2027-05-01|0700 - 1700|nz|Northern Zone (NS)', '2027-05-02|0700 - 1700|nz|Northern Zone (NS)', '2027-05-07|1800|points|Brief', '2027-05-08|0700 - 1700|points|Major Points', '2027-05-09|0700 - 1700|points|Major Points & BBQ', '2027-05-13|1730|meeting|Committee Meeting',
     '2027-06-04|1800|points|Brief', '2027-06-05|0700 - 1700|points|Major Points', '2027-06-06|0700 - 1700|points|Major Points & BBQ', '2027-06-10|1800|meeting|Annual General Meeting', '2027-06-17|1730|meeting|Committee Meeting'
   ];
-  const TBC = [{ month: '2027-01', title: 'Coffs Harbour Hot Current Tournament', note: 'Dates to be confirmed', cat: 'other' }];
+  const TBC = [];
 
   const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
