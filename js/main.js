@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Membership application: sent to the club secretary through Web3Forms
-  const join = document.querySelector('#join-form');
-  if (join) {
+  document.querySelectorAll('#join-form, #boat-form, #boat-form-m').forEach((join) => {
+    const isBoat = join.id.indexOf('boat-form') === 0;
     join.addEventListener('submit', async (e) => {
       e.preventDefault();
       const status = join.querySelector('.form-status');
@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       const data = Object.fromEntries(new FormData(join));
       if (!data.access_key || data.access_key === 'YOUR_ACCESS_KEY_HERE') {
-        show('This form is not connected yet, so no application was sent.', false);
+        show('This form is not connected yet, so nothing was sent.', false);
         return;
       }
-      data.application_date = new Date().toLocaleDateString('en-AU');
+      data.submitted_on = new Date().toLocaleDateString('en-AU');
       btn.disabled = true;
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const json = await res.json();
         if (!json.success) throw new Error(json.message || 'failed');
-        show('Thanks! Your application has been sent to the club secretary.', true);
+        show(isBoat ? 'Thanks! Your Boat Safety Rescue Form has been sent to the club secretary.' : 'Thanks! Your application has been sent to the club secretary.', true);
         join.reset();
       } catch (err) {
         show('Sorry, something went wrong. Please email your details to secretary@capehawkegfc.com.au.', false);
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.disabled = false;
       }
     });
-  }
+  });
 
   // Contact form: opens the visitor's email app addressed to the club secretary
   const form = document.querySelector('#contact-form');
@@ -111,3 +111,27 @@ document.addEventListener('DOMContentLoaded', () => {
   tiles.forEach((t) => grid.appendChild(t));
 
 });
+
+/* Gallery lightbox */
+(function () {
+  var items = Array.prototype.slice.call(document.querySelectorAll('#gallery .g-item'));
+  if (!items.length) return;
+  var box = document.createElement('div');
+  box.className = 'g-lightbox'; box.hidden = true; box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Photo viewer');
+  box.innerHTML = '<button class="g-close" aria-label="Close">×</button><button class="g-prev" aria-label="Previous photo">‹</button><img alt=""><button class="g-next" aria-label="Next photo">›</button>';
+  document.body.appendChild(box);
+  var img = box.querySelector('img'), cur = 0;
+  function show(i) { cur = (i + items.length) % items.length; var im = items[cur].querySelector('img'); img.src = items[cur].getAttribute('data-full') || im.src; img.alt = im.alt; }
+  function open(i) { show(i); box.hidden = false; document.body.style.overflow = 'hidden'; }
+  function close() { box.hidden = true; document.body.style.overflow = ''; }
+  items.forEach(function (a, i) { a.addEventListener('click', function (e) { e.preventDefault(); open(i); }); });
+  box.querySelector('.g-close').onclick = close;
+  box.querySelector('.g-prev').onclick = function () { show(cur - 1); };
+  box.querySelector('.g-next').onclick = function () { show(cur + 1); };
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  window.addEventListener('hashchange', close);
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') show(cur - 1); else if (e.key === 'ArrowRight') show(cur + 1);
+  });
+})();

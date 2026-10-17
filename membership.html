@@ -15,7 +15,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=20261016">
+<link rel="stylesheet" href="css/styles.css?v=20261017">
 </head>
 <body>
 
@@ -32,7 +32,7 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="events.html">Events</a></li>
+      <li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
       <li><a href="membership.html" aria-current="page">Membership</a></li>
       <li><a href="shop.html">Merch</a></li><li><a href="contact.html">Contact</a></li>
@@ -104,7 +104,7 @@
         <div class="eyebrow">Join the club</div>
         <h2>Membership application</h2>
       </div>
-      <p>Complete the form and the club secretary will be in touch about your application. Fees apply for 1 July 2026 to 30 June 2027.</p>
+      <p>Complete the form and the club secretary will be in touch about your application. Fees apply for 1 July 2026 to 30 June 2027. Prefer paper? <a href="#forms-downloads">Download the form</a>.</p>
     </div>
     <div class="card">
       <!-- TODO: proposer/seconder are optional for now (the form asks for members of 1+ year's standing); confirm with the secretary -->
@@ -141,6 +141,96 @@
   </div>
 </section>
 
+<section class="section-white" id="forms-downloads">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Download</div><h2>Club forms and downloads</h2></div><p>Send completed forms to <a href="mailto:secretary@capehawkegfc.com.au">secretary@capehawkegfc.com.au</a>.</p></div>
+    <div class="forms-list">
+      <div class="card"><span class="tag">Word (.docx)</span><h3>Membership Application Form 2026/27</h3><p>Word document. Print, complete and email to the secretary with confirmation of payment, or post it to the PO Box. You can also apply online using the form above.</p><p><a class="btn btn-gold" href="assets/forms/CHGFC-Membership-Form-2026-27.docx" download>Download</a> <a class="btn btn-outline-dark" href="#apply">Apply online instead →</a></p></div>
+      <div class="card"><span class="tag">PDF</span><h3>Club Competition Nomination Form</h3><p>PDF. Skippers and team captains submit this to the secretary no later than the Tuesday before the competition weekend.</p><p><a class="btn btn-gold" href="assets/forms/CHGFC-Club-Competition-Nomination-Form.pdf" download>Download</a></p></div>
+      <div class="card"><span class="tag">Word (.docx)</span><h3>Boat Safety Rescue Form</h3><p>Word document. A printable copy of the form below. Each boat needs one on file, and you can complete it online instead.</p><p><a class="btn btn-gold" href="assets/forms/CHGFC-Boat-Safety-Rescue-Form.docx" download>Download</a> <a class="btn btn-outline-dark" href="#boat-safety-m">Complete online instead →</a></p></div>
+      </div>
+  </div>
+</section>
+
+<section class="section-sand" id="boat-safety-m">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Online form</div><h2>Boat Safety Rescue Form</h2></div><p>All fields are required. Your answers are emailed to the club secretary.</p></div>
+    <div class="card">
+      <form id="boat-form-m">
+        <input type="hidden" name="access_key" value="df0476c0-bca7-45e7-892a-080580cc840f">
+        <input type="hidden" name="subject" value="Boat Safety Rescue Form (website)">
+        <input type="hidden" name="from_name" value="CHGFC website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-grid">
+          <div class="field full"><h3 class="form-sub">Boat details</h3></div>
+          <div class="field full"><label for="mb1">Boat name *</label><input type="text" id="mb1" name="boat_name" required></div>
+          <div class="field"><label for="mb2">Rego no. *</label><input type="text" id="mb2" name="rego_no" required></div>
+          <div class="field"><label for="mb3">Make *</label><input type="text" id="mb3" name="make" required></div>
+          <div class="field"><label for="mb4">Colour – hull *</label><input type="text" id="mb4" name="hull_colour" required></div>
+          <div class="field"><label for="mb5">Colour – topside *</label><input type="text" id="mb5" name="topside_colour" required></div>
+          <div class="field"><label for="mb6">Length *</label><input type="text" id="mb6" name="length" required></div>
+          <div class="field"><label for="mb7">Construction *</label><input type="text" id="mb7" name="construction" required></div>
+          <div class="field full" role="radiogroup" aria-labelledby="mb8"><span class="legend" id="mb8">Type of boat *</span><div class="choices"><label class="choice"><input type="radio" name="boat_type" value="Full cabin" required> Full cabin</label><label class="choice"><input type="radio" name="boat_type" value="Half cabin"> Half cabin</label><label class="choice"><input type="radio" name="boat_type" value="Runabout"> Runabout</label><label class="choice"><input type="radio" name="boat_type" value="Other"> Other</label></div></div>
+          <div class="field"><label for="mb9">Number of engines *</label><input type="number" id="mb9" name="number_of_engines" required min="1"></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb10"><span class="legend" id="mb10">Engine type *</span><div class="choices"><label class="choice"><input type="radio" name="engine_type" value="Inboard" required> Inboard</label><label class="choice"><input type="radio" name="engine_type" value="Outboard"> Outboard</label></div></div>
+          <div class="field"><label for="mb11">Fuel *</label><input type="text" id="mb11" name="fuel" required></div>
+          <div class="field"><label for="mb12">Fuel capacity (litres) *</label><input type="number" id="mb12" name="fuel_capacity_litres" required min="0"></div>
+          <div class="field"><label for="mb13">Range *</label><input type="text" id="mb13" name="range" required></div>
+          <div class="field"><label for="mb14">Cruising speed *</label><input type="text" id="mb14" name="cruising_speed" required></div>
+          <div class="field full"><h3 class="form-sub">Radios</h3></div>
+          <div class="field full"><p class="form-note">Each boat must have at least a working VHF transceiver with ch16, ch77 and ch80. If you do not carry a 27MHz radio, type N/A.</p></div>
+          <div class="field"><label for="mb15">27MHz call sign *</label><input type="text" id="mb15" name="call_sign_27mhz" required></div>
+          <div class="field"><label for="mb16">VHF call sign *</label><input type="text" id="mb16" name="call_sign_vhf" required></div>
+          <div class="field full"><label for="mb17">Mobile phone numbers on board *</label><input type="text" id="mb17" name="mobile_numbers_on_board" required placeholder="e.g. 0400 000 000, 0400 000 001"></div>
+          <div class="field full"><h3 class="form-sub">Safety gear on board</h3></div>
+          <div class="field"><label for="mb18">Number of flares *</label><input type="number" id="mb18" name="flares_number" required min="0"></div>
+          <div class="field"><label for="mb19">Flares expiry date *</label><input type="date" id="mb19" name="flares_expiry" required></div>
+          <div class="field"><label for="mb20">Flares colour *</label><input type="text" id="mb20" name="flares_colour" required></div>
+          <div class="field"><label for="mb21">Number of life jackets *</label><input type="number" id="mb21" name="life_jackets_number" required min="0"></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb22"><span class="legend" id="mb22">First aid kit *</span><div class="choices"><label class="choice"><input type="radio" name="first_aid_kit" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="first_aid_kit" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb23"><span class="legend" id="mb23">Bilge pumps *</span><div class="choices"><label class="choice"><input type="radio" name="bilge_pumps" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="bilge_pumps" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb24"><span class="legend" id="mb24">Paddle *</span><div class="choices"><label class="choice"><input type="radio" name="paddle" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="paddle" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb25"><span class="legend" id="mb25">GPS *</span><div class="choices"><label class="choice"><input type="radio" name="gps" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="gps" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb26"><span class="legend" id="mb26">Compass *</span><div class="choices"><label class="choice"><input type="radio" name="compass" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="compass" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb27"><span class="legend" id="mb27">Radar *</span><div class="choices"><label class="choice"><input type="radio" name="radar" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="radar" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb28"><span class="legend" id="mb28">Torch *</span><div class="choices"><label class="choice"><input type="radio" name="torch" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="torch" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb29"><span class="legend" id="mb29">Sea anchor *</span><div class="choices"><label class="choice"><input type="radio" name="sea_anchor" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="sea_anchor" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb30"><span class="legend" id="mb30">V-sheet *</span><div class="choices"><label class="choice"><input type="radio" name="v_sheet" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="v_sheet" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb31"><span class="legend" id="mb31">Signalling mirror *</span><div class="choices"><label class="choice"><input type="radio" name="signalling_mirror" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="signalling_mirror" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb32"><span class="legend" id="mb32">Bailer *</span><div class="choices"><label class="choice"><input type="radio" name="bailer" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="bailer" value="No"> No</label></div></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb33"><span class="legend" id="mb33">Emergency rations *</span><div class="choices"><label class="choice"><input type="radio" name="emergency_rations" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="emergency_rations" value="No"> No</label></div></div>
+          <div class="field"><label for="mb34">Emergency rations: how many *</label><input type="number" id="mb34" name="emergency_rations_how_many" required min="0"></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb35"><span class="legend" id="mb35">Fresh water (2 litres per person) *</span><div class="choices"><label class="choice"><input type="radio" name="fresh_water" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="fresh_water" value="No"> No</label></div></div>
+          <div class="field"><label for="mb36">How many people on board *</label><input type="number" id="mb36" name="people_on_board" required min="1"></div>
+          <div class="field full"><p class="form-note">All boats must comply with the current Waterways Authority regulations for safety gear and procedures in force.</p></div>
+          <div class="field full"><h3 class="form-sub">Insurance</h3></div>
+          <div class="field full"><label for="mb37">Insurance company *</label><input type="text" id="mb37" name="insurance_company" required></div>
+          <div class="field"><label for="mb38">Policy number *</label><input type="text" id="mb38" name="policy_number" required></div>
+          <div class="field"><label for="mb39">Type *</label><input type="text" id="mb39" name="insurance_type" required></div>
+          <div class="field" role="radiogroup" aria-labelledby="mb40"><span class="legend" id="mb40">Current *</span><div class="choices"><label class="choice"><input type="radio" name="insurance_current" value="Yes" required> Yes</label><label class="choice"><input type="radio" name="insurance_current" value="No"> No</label></div></div>
+          <div class="field"><label for="mb41">Insurance expiry date *</label><input type="date" id="mb41" name="insurance_expiry" required></div>
+          <div class="field full"><label class="choice" for="mb-cert"><input type="checkbox" id="mb-cert" name="certificate_to_be_emailed" value="Yes" required> I will email my Certificate of Currency of Insurance to secretary@capehawkegfc.com.au. *</label></div>
+          <div class="field full"><h3 class="form-sub">Signatures</h3></div>
+          <div class="field full"><p class="form-note">Type your full name as your signature. By signing, you confirm the details above are correct.</p></div>
+          <div class="field"><label for="mb42">Signed (type full name) *</label><input type="text" id="mb42" name="signed" required></div>
+          <div class="field"><label for="mb43">Name *</label><input type="text" id="mb43" name="signed_name" required></div>
+          <div class="field"><label for="mb44">Date *</label><input type="date" id="mb44" name="signed_date" required></div>
+          <div class="field"><label for="mb45">Witnessed by (type full name) *</label><input type="text" id="mb45" name="witnessed" required></div>
+          <div class="field"><label for="mb46">Witness name *</label><input type="text" id="mb46" name="witness_name" required></div>
+          <div class="field"><label for="mb47">Witness date *</label><input type="date" id="mb47" name="witness_date" required></div>
+          <div class="field"><label for="mb48">Skipper's name *</label><input type="text" id="mb48" name="skipper_name" required></div>
+          <div class="field"><label for="mb49">Boat licence no. *</label><input type="text" id="mb49" name="boat_licence_no" required></div>
+          <div class="field"><label for="mb50">Skipper's signature (type full name) *</label><input type="text" id="mb50" name="skipper_signature" required></div>
+          <div class="field"><label for="mb51">Skipper signature date *</label><input type="date" id="mb51" name="skipper_date" required></div>
+        </div>
+        <p class="form-note">Your details are emailed to the club secretary.</p>
+        <button type="submit" class="btn btn-gold">Submit form</button>
+        <div class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -156,7 +246,7 @@
         <ul>
           <li><a href="about.html">About us</a></li>
           <li><a href="membership.html">Membership</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="forms.html">Forms</a></li>
         </ul>
       </div>
       <div>
@@ -176,6 +266,6 @@
     </div>
   </div>
 </footer>
-<script src="js/main.js?v=20261016"></script>
+<script src="js/main.js?v=20261017"></script>
 </body>
 </html>
