@@ -64,7 +64,9 @@
         rows.forEach((e) => {
           const past = (e.end || e.date) < today;
           const r = el('div', 'cal-row ' + CATS[e.cat].cls + (past ? ' past' : ''));
-          r.append(el('span', 'cal-day', e.tbc ? 'TBC' : dayLabel(e)));
+          const dayCell = el('span', 'cal-day');
+          if (e.tbc) { dayCell.textContent = 'TBC'; } else { const t = el('time', '', dayLabel(e)); t.setAttribute('datetime', e.date); dayCell.append(t); }
+          r.append(dayCell);
           const w = el('span', 'cal-what'); w.append(el('strong', '', e.title));
           if (e.note) w.append(el('em', '', e.note));
           r.append(w, el('span', 'cal-time', fmtTime(e.time)));
@@ -81,6 +83,7 @@
       filters.append(b);
     });
     const past = document.getElementById('cal-past');
+    if (past) past.hidden = false;
     if (past) past.addEventListener('click', () => { showPast = !showPast; past.textContent = showPast ? 'Hide past events' : 'Show past events'; render(); });
     render();
   }
@@ -92,7 +95,14 @@
     const e = events.find((x) => (x.end || x.date) >= today && x.title !== 'Brief');
     if (e) {
       nx.querySelector('h3').textContent = e.title;
-      nx.querySelector('p').textContent = dayLabel(e) + ' ' + MONTHS[d(e.date).getMonth()] + (e.time ? ', ' + fmtTime(e.time) : '') + '. ' + CATS[e.cat].label + '.';
+      let when;
+      if (e.end) {
+        const a = d(e.date), b = d(e.end);
+        when = a.getMonth() === b.getMonth()
+          ? ordinal(a.getDate()) + ' to ' + ordinal(b.getDate()) + ' ' + MONTHS[a.getMonth()]
+          : ordinal(a.getDate()) + ' ' + MONTHS[a.getMonth()].slice(0, 3) + ' to ' + ordinal(b.getDate()) + ' ' + MONTHS[b.getMonth()].slice(0, 3);
+      } else { when = dayLabel(e) + ' ' + MONTHS[d(e.date).getMonth()]; }
+      nx.querySelector('p').textContent = when + (e.time ? ', ' + fmtTime(e.time) : '') + '. ' + CATS[e.cat].label + '.';
     }
   }
 })();
