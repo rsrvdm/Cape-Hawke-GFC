@@ -700,3 +700,9 @@ section { padding: 84px 0; }
 .forms-list .card p:last-child { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
 .form-sub { font-size: 1.05rem; margin: 18px 0 0; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
 @media (max-width: 860px) { .forms-list { grid-template-columns: 1fr; } }
+
+/* Phonetic alphabet (sked page) */
+.ph-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.ph-item{display:flex;align-items:baseline;gap:10px;padding:8px 12px;border:1px solid rgba(0,0,0,0.12);border-radius:8px;background:#fff}
+.ph-k{font-family:var(--font-display);font-size:1.4rem;line-height:1;min-width:1.2em;color:var(--navy,#0f2f4a)}
+.ph-w{font-size:0.95rem}
