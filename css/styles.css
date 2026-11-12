@@ -706,3 +706,29 @@ section { padding: 84px 0; }
 .ph-item{display:flex;align-items:baseline;gap:10px;padding:8px 12px;border:1px solid rgba(0,0,0,0.12);border-radius:8px;background:#fff}
 .ph-k{font-family:var(--font-display);font-size:1.4rem;line-height:1;min-width:1.2em;color:var(--navy,#0f2f4a)}
 .ph-w{font-size:0.95rem}
+
+/* Clickable words in body text: blue and underlined so they read as links */
+
+:is(.section-sand,.section-white) p a:not(.btn):not(.pp-logo):not(:has(img)),
+:is(.section-sand,.section-white) li a:not(.btn):not(.pp-logo):not(:has(img)),
+:is(.section-sand,.section-white) .lede a:not(.btn):not(:has(img)) {
+  color: #1a5fb4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+:is(.section-sand,.section-white) p a:not(.btn):not(.pp-logo):not(:has(img)):hover,
+:is(.section-sand,.section-white) li a:not(.btn):not(.pp-logo):not(:has(img)):hover,
+:is(.section-sand,.section-white) .lede a:not(.btn):not(:has(img)):hover {
+  color: #0f3f80;
+  text-decoration-thickness: 2px;
+}
+.hero p a:not(.btn):not(:has(img)), .hero .lede a:not(.btn):not(:has(img)),
+.section-navy p a:not(.btn):not(:has(img)), .section-navy li a:not(.btn):not(:has(img)) {
+  color: #8ec5ff;
+}
+.hero p a:not(.btn):not(:has(img)):hover, .hero .lede a:not(.btn):not(:has(img)):hover,
+.section-navy p a:not(.btn):not(:has(img)):hover, .section-navy li a:not(.btn):not(:has(img)):hover {
+  color: #c4e0ff;
+}
